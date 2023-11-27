@@ -123,20 +123,6 @@ Discarded input sections
  .text          0x00000000        0x0 MCAL/ADC/adc.o
  .data          0x00000000        0x0 MCAL/ADC/adc.o
  .bss           0x00000000        0x0 MCAL/ADC/adc.o
- .text.ADC_init
-                0x00000000       0x10 MCAL/ADC/adc.o
- .text.ADC_read
-                0x00000000       0x20 MCAL/ADC/adc.o
- .debug_info    0x00000000       0x8e MCAL/ADC/adc.o
- .debug_abbrev  0x00000000       0x6f MCAL/ADC/adc.o
- .debug_loc     0x00000000       0x21 MCAL/ADC/adc.o
- .debug_aranges
-                0x00000000       0x28 MCAL/ADC/adc.o
- .debug_ranges  0x00000000       0x18 MCAL/ADC/adc.o
- .debug_line    0x00000000       0xaa MCAL/ADC/adc.o
- .debug_str     0x00000000      0x129 MCAL/ADC/adc.o
- .comment       0x00000000       0x31 MCAL/ADC/adc.o
- .debug_frame   0x00000000       0x34 MCAL/ADC/adc.o
  .text          0x00000000        0x0 MCAL/DIO Driver/dio.o
  .data          0x00000000        0x0 MCAL/DIO Driver/dio.o
  .bss           0x00000000        0x0 MCAL/DIO Driver/dio.o
@@ -504,7 +490,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x3b0
+.text           0x00000000      0x416
  *(.vectors)
  .vectors       0x00000000       0x54 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -585,36 +571,42 @@ END GROUP
                 0x0000007c                . = ALIGN (0x2)
  *(.text.*)
  .text.app_init
-                0x0000007c       0x42 Application/app.o
+                0x0000007c       0x52 Application/app.o
                 0x0000007c                app_init
  .text.app_start
-                0x000000be       0x56 Application/app.o
-                0x000000be                app_start
+                0x000000ce       0x7c Application/app.o
+                0x000000ce                app_start
  .text.servo_move_zero_deg
-                0x00000114       0x34 ECUAL/Servo Motor/servo.o
-                0x00000114                servo_move_zero_deg
+                0x0000014a       0x34 ECUAL/Servo Motor/servo.o
+                0x0000014a                servo_move_zero_deg
  .text.servo_move_180_deg
-                0x00000148       0x34 ECUAL/Servo Motor/servo.o
-                0x00000148                servo_move_180_deg
- .text.main     0x0000017c        0xa main.o
-                0x0000017c                main
+                0x0000017e       0x34 ECUAL/Servo Motor/servo.o
+                0x0000017e                servo_move_180_deg
+ .text.main     0x000001b2        0xa main.o
+                0x000001b2                main
+ .text.ADC_init
+                0x000001bc       0x10 MCAL/ADC/adc.o
+                0x000001bc                ADC_init
+ .text.ADC_read
+                0x000001cc       0x20 MCAL/ADC/adc.o
+                0x000001cc                ADC_read
  .text.DIO_init
-                0x00000186       0xf0 MCAL/DIO Driver/dio.o
-                0x00000186                DIO_init
+                0x000001ec       0xf0 MCAL/DIO Driver/dio.o
+                0x000001ec                DIO_init
  .text.DIO_write
-                0x00000276       0xf0 MCAL/DIO Driver/dio.o
-                0x00000276                DIO_write
+                0x000002dc       0xf0 MCAL/DIO Driver/dio.o
+                0x000002dc                DIO_write
  .text.Spi_Slave_init
-                0x00000366       0x3a MCAL/SPI/spi.o
-                0x00000366                Spi_Slave_init
+                0x000003cc       0x3a MCAL/SPI/spi.o
+                0x000003cc                Spi_Slave_init
  .text.Spi_Slave_receive
-                0x000003a0        0xc MCAL/SPI/spi.o
-                0x000003a0                Spi_Slave_receive
-                0x000003ac                . = ALIGN (0x2)
+                0x00000406        0xc MCAL/SPI/spi.o
+                0x00000406                Spi_Slave_receive
+                0x00000412                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000003ac        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000003ac                _exit
-                0x000003ac                exit
+ .fini9         0x00000412        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000412                _exit
+                0x00000412                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -633,11 +625,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000003ac        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000412        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000003b0                _etext = .
+                0x00000416                _etext = .
 
-.data           0x00800060        0x0 load address 0x000003b0
+.data           0x00800060        0x0 load address 0x00000416
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -649,24 +641,27 @@ END GROUP
                 0x00800060                _edata = .
                 [!provide]                PROVIDE (__data_end, .)
 
-.bss            0x00800060        0x3
+.bss            0x00800060        0x5
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.digital_value
+                0x00800060        0x2 Application/app.o
+                0x00800060                digital_value
  *(COMMON)
- COMMON         0x00800060        0x3 Application/app.o
-                0x00800060                button_2_state
-                0x00800061                data
-                0x00800062                button_1_state
-                0x00800063                PROVIDE (__bss_end, .)
-                0x000003b0                __data_load_start = LOADADDR (.data)
-                0x000003b0                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800062        0x3 Application/app.o
+                0x00800062                button_2_state
+                0x00800063                data
+                0x00800064                button_1_state
+                0x00800065                PROVIDE (__bss_end, .)
+                0x00000416                __data_load_start = LOADADDR (.data)
+                0x00000416                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800063        0x0
+.noinit         0x00800065        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800063                _end = .
+                0x00800065                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -712,6 +707,7 @@ END GROUP
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 ECUAL/Servo Motor/servo.o
  .comment       0x00000030       0x31 main.o
+ .comment       0x00000030       0x31 MCAL/ADC/adc.o
  .comment       0x00000030       0x31 MCAL/DIO Driver/dio.o
  .comment       0x00000030       0x31 MCAL/SPI/spi.o
 
@@ -735,7 +731,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf0
+.debug_aranges  0x00000000      0x118
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 Application/app.o
@@ -744,66 +740,75 @@ END GROUP
  .debug_aranges
                 0x00000058       0x20 main.o
  .debug_aranges
-                0x00000078       0x38 MCAL/DIO Driver/dio.o
+                0x00000078       0x28 MCAL/ADC/adc.o
  .debug_aranges
-                0x000000b0       0x40 MCAL/SPI/spi.o
+                0x000000a0       0x38 MCAL/DIO Driver/dio.o
+ .debug_aranges
+                0x000000d8       0x40 MCAL/SPI/spi.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xe6d
+.debug_info     0x00000000      0xf53
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x249 Application/app.o
- .debug_info    0x0000072f      0x309 ECUAL/Servo Motor/servo.o
- .debug_info    0x00000a38       0xba main.o
- .debug_info    0x00000af2      0x14d MCAL/DIO Driver/dio.o
- .debug_info    0x00000c3f      0x22e MCAL/SPI/spi.o
+ .debug_info    0x000004e6      0x2a1 Application/app.o
+ .debug_info    0x00000787      0x309 ECUAL/Servo Motor/servo.o
+ .debug_info    0x00000a90       0xba main.o
+ .debug_info    0x00000b4a       0x8e MCAL/ADC/adc.o
+ .debug_info    0x00000bd8      0x14d MCAL/DIO Driver/dio.o
+ .debug_info    0x00000d25      0x22e MCAL/SPI/spi.o
 
-.debug_abbrev   0x00000000      0x7fc
+.debug_abbrev   0x00000000      0x872
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3       0x9a Application/app.o
- .debug_abbrev  0x0000053d       0xf1 ECUAL/Servo Motor/servo.o
- .debug_abbrev  0x0000062e       0x86 main.o
- .debug_abbrev  0x000006b4       0x87 MCAL/DIO Driver/dio.o
- .debug_abbrev  0x0000073b       0xc1 MCAL/SPI/spi.o
+ .debug_abbrev  0x000004a3       0xa1 Application/app.o
+ .debug_abbrev  0x00000544       0xf1 ECUAL/Servo Motor/servo.o
+ .debug_abbrev  0x00000635       0x86 main.o
+ .debug_abbrev  0x000006bb       0x6f MCAL/ADC/adc.o
+ .debug_abbrev  0x0000072a       0x87 MCAL/DIO Driver/dio.o
+ .debug_abbrev  0x000007b1       0xc1 MCAL/SPI/spi.o
 
-.debug_line     0x00000000      0x82e
+.debug_line     0x00000000      0x926
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116      0x17a Application/app.o
- .debug_line    0x00000290      0x1a9 ECUAL/Servo Motor/servo.o
- .debug_line    0x00000439       0x97 main.o
- .debug_line    0x000004d0      0x1d3 MCAL/DIO Driver/dio.o
- .debug_line    0x000006a3      0x18b MCAL/SPI/spi.o
+ .debug_line    0x00000116      0x1c8 Application/app.o
+ .debug_line    0x000002de      0x1a9 ECUAL/Servo Motor/servo.o
+ .debug_line    0x00000487       0x97 main.o
+ .debug_line    0x0000051e       0xaa MCAL/ADC/adc.o
+ .debug_line    0x000005c8      0x1d3 MCAL/DIO Driver/dio.o
+ .debug_line    0x0000079b      0x18b MCAL/SPI/spi.o
 
-.debug_frame    0x00000000      0x154
+.debug_frame    0x00000000      0x188
  *(.debug_frame)
  .debug_frame   0x00000000       0x34 Application/app.o
  .debug_frame   0x00000034       0x44 ECUAL/Servo Motor/servo.o
  .debug_frame   0x00000078       0x24 main.o
- .debug_frame   0x0000009c       0x54 MCAL/DIO Driver/dio.o
- .debug_frame   0x000000f0       0x64 MCAL/SPI/spi.o
+ .debug_frame   0x0000009c       0x34 MCAL/ADC/adc.o
+ .debug_frame   0x000000d0       0x54 MCAL/DIO Driver/dio.o
+ .debug_frame   0x00000124       0x64 MCAL/SPI/spi.o
 
-.debug_str      0x00000000      0x49e
+.debug_str      0x00000000      0x4db
  *(.debug_str)
  .debug_str     0x00000000      0x196 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x18c Application/app.o
-                                0x199 (size before relaxing)
- .debug_str     0x00000322       0x9f ECUAL/Servo Motor/servo.o
+ .debug_str     0x00000196      0x1b5 Application/app.o
+                                0x1c2 (size before relaxing)
+ .debug_str     0x0000034b       0x9f ECUAL/Servo Motor/servo.o
                                 0x1e2 (size before relaxing)
- .debug_str     0x000003c1       0x11 main.o
+ .debug_str     0x000003ea       0x11 main.o
                                 0x135 (size before relaxing)
- .debug_str     0x000003d2       0x7a MCAL/DIO Driver/dio.o
+ .debug_str     0x000003fb       0x1a MCAL/ADC/adc.o
+                                0x128 (size before relaxing)
+ .debug_str     0x00000415       0x74 MCAL/DIO Driver/dio.o
                                 0x15b (size before relaxing)
- .debug_str     0x0000044c       0x52 MCAL/SPI/spi.o
+ .debug_str     0x00000489       0x52 MCAL/SPI/spi.o
                                 0x179 (size before relaxing)
 
-.debug_loc      0x00000000      0x422
+.debug_loc      0x00000000      0x443
  *(.debug_loc)
  .debug_loc     0x00000000      0x1aa ECUAL/Servo Motor/servo.o
- .debug_loc     0x000001aa      0x278 MCAL/DIO Driver/dio.o
+ .debug_loc     0x000001aa       0x21 MCAL/ADC/adc.o
+ .debug_loc     0x000001cb      0x278 MCAL/DIO Driver/dio.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -823,13 +828,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xa0
+.debug_ranges   0x00000000       0xb8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x18 Application/app.o
  .debug_ranges  0x00000018       0x20 ECUAL/Servo Motor/servo.o
  .debug_ranges  0x00000038       0x10 main.o
- .debug_ranges  0x00000048       0x28 MCAL/DIO Driver/dio.o
- .debug_ranges  0x00000070       0x30 MCAL/SPI/spi.o
+ .debug_ranges  0x00000048       0x18 MCAL/ADC/adc.o
+ .debug_ranges  0x00000060       0x28 MCAL/DIO Driver/dio.o
+ .debug_ranges  0x00000088       0x30 MCAL/SPI/spi.o
 
 .debug_macro
  *(.debug_macro)

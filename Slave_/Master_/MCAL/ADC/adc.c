@@ -22,7 +22,7 @@ uint16_t ADC_read(uint8_t channel)
 	ADCSRA |= (1<<ADSC);		//Start Conversion
 	
 	while( (ADCSRA & (1<<4)) == 0);	//Wait for conversion Complete flag
-	
+
 	return ADCL | (ADCH << 8);	//Return the digital value
 	
 }
