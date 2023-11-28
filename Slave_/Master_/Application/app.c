@@ -9,15 +9,16 @@
 
 #define Vref 5.0
 #define ADC_STEP Vref/1024.0
-#define SENSOR_RESOLUTION (float)1 /*means -> 1 xVolt/x sensor reading*/
+#define SENSOR_RESOLUTION (float)10 /*means -> 1 xVolt/x sensor reading*/
 
 uint8_t data;
 
 uint8_t welcome_string[] = "Welcome";
-uint8_t done_string[] = "ADC value is:";
+uint8_t done_string[] = "Temp in C = ";
 
 uint8_t value[4];
 
+uint8_t Sensor_value;
 
 volatile uint16_t digital_value = 0;
 volatile uint16_t decimal = 0,weight = 1;
@@ -26,13 +27,10 @@ volatile uint8_t rem = 0;
 void app_init(void)
 {
 	/*DIO PINS Config*/
-	DIO_init(PORT_D,PIN5,OUT); /*Makes PIN5 in PORT D output pin and initiate it by low*/
-	DIO_init(PORT_D,PIN6,OUT); /*Makes PIN6 in PORT D output pin and initiate it by low*/
-	DIO_init(PORT_D,PIN7,OUT); /*Makes PIN7 in PORT D output pin and initiate it by low*/
-		
-	DIO_write(PORT_D,PIN5,LOW);
-	DIO_write(PORT_D,PIN6,LOW);
-	DIO_write(PORT_D,PIN7,LOW);
+	DIO_init(PORT_D,PIN5,OUT); DIO_write(PORT_D,PIN5,LOW); /*Makes PIN5 in PORT D output pin and initiate it by low*/
+	DIO_init(PORT_D,PIN6,OUT); DIO_write(PORT_D,PIN6,LOW); /*Makes PIN6 in PORT D output pin and initiate it by low*/
+	DIO_init(PORT_D,PIN7,OUT); DIO_write(PORT_D,PIN7,LOW); /*Makes PIN7 in PORT D output pin and initiate it by low*/
+	DIO_init(PORT_C,PIN0,OUT); DIO_write(PORT_C,PIN0,LOW); /*Makes PIN0 in PORT C output pin and initiate it by low*/
 	
 	/*SPI and LCD initialize*/
 	Spi_Slave_init();
@@ -74,9 +72,6 @@ void app_start(void)
 			 Temp_sensor_read();
 		default: break;
 	}
-	
-
-	
 }
 void clear_temp_string(uint8_t *str)
 {
@@ -88,8 +83,6 @@ void clear_temp_string(uint8_t *str)
 }
 void display_Temp_on_LCD(void)
 {
-	LCD_4_bit_sendChar(value[3]);
-	LCD_4_bit_sendChar(value[2]);
 	LCD_4_bit_sendChar(value[1]);
 	LCD_4_bit_sendChar(value[0]);	
 }
@@ -99,23 +92,32 @@ void Temp_sensor_read(void)
 	
 	digital_value = ADC_read(ADC_CH_0); // Read the value from ADC
 	
+	Sensor_value = (digital_value * (ADC_STEP)) * 10;
+	
 	LCD_4_bit_sendString(done_string); // indicates the conversion finished
 	
-	TIMER0_delay(2000,no_prescale);
-	
-	LCD_4_bit_sendCommand(0x01); //clears the LCD
+	if(Sensor_value >= 30)
+	{
+		DIO_write(PORT_C,PIN0,HIGH); // FAN ON
+	}
+	else
+	{
+		DIO_write(PORT_C,PIN0,LOW); // FAN OFF
+	}
 	
 	decimal = 0; weight = 1; rem = 0;
 	uint8_t index = 0;
 	/*Extracts the each number and put it in the value string for display*/
-	while(digital_value != 0)
+	while(Sensor_value != 0)
 	{
-		value[index] = (digital_value % 10) + (0x30);
-		digital_value = digital_value/10;
+		value[index] = (Sensor_value % 10) + (0x30);
+		Sensor_value = Sensor_value/10;
 		index++;
 	}
 	display_Temp_on_LCD();
 	clear_temp_string(value); // resets the value strings	
+	
+
 }
 
 
