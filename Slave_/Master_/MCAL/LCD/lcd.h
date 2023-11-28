@@ -17,9 +17,9 @@
 #define LCD_Data_PORT PORTC
 #define LCD_Data_PORT_Dir DDRC
 
-#define RS PIN0
-#define RW PIN1
-#define EN PIN2
+#define RS PIN2
+#define RW PIN3
+#define EN PIN4
 
 /*Macros for all the commands*/
 
@@ -33,6 +33,7 @@ void LCD_4_bit_init(void);
 void LCD_4_bit_sendCommand(uint8_t command);
 void LCD_4_bit_sendChar(uint8_t character);
 void LCD_4_bit_sendString(uint8_t *str);
+void LCD_4_bit_sendString_reverse(uint8_t *str);
 
 	
 

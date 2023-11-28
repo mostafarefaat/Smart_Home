@@ -1,9 +1,9 @@
 ECUAL/Servo Motor/servo.d ECUAL/Servo Motor/servo.o: \
  ../ECUAL/Servo\ Motor/servo.c \
  ../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/dio.h \
- d:\avr_projects\slave_\master_\utilities\registers.h \
- d:\avr_projects\slave_\master_\utilities\types.h \
- d:\avr_projects\slave_\master_\utilities\bit_manipulation.h \
+ ../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/registers.h \
+ ../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/types.h \
+ ../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/bit_manipulation.h \
  ../ECUAL/Servo\ Motor/servo.h \
  d:\microship_studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\microship_studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -14,11 +14,11 @@ ECUAL/Servo Motor/servo.d ECUAL/Servo Motor/servo.o: \
 
 ../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/dio.h:
 
-d:\avr_projects\slave_\master_\utilities\registers.h:
+../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/registers.h:
 
-d:\avr_projects\slave_\master_\utilities\types.h:
+../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/types.h:
 
-d:\avr_projects\slave_\master_\utilities\bit_manipulation.h:
+../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/../../utilities/bit_manipulation.h:
 
 ../ECUAL/Servo\ Motor/servo.h:
 

@@ -430,7 +430,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x107e
+.text           0x00000000     0x10c2
  *(.vectors)
  .vectors       0x00000000       0x54 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -514,155 +514,155 @@ END GROUP
                 0x00000092       0x44 Apllication/app.o
                 0x00000092                app_init
  .text.app_start
-                0x000000d6        0x2 Apllication/app.o
+                0x000000d6       0x1c Apllication/app.o
                 0x000000d6                app_start
  .text.password_check
-                0x000000d8      0x184 Apllication/app.o
-                0x000000d8                password_check
- .text.main     0x0000025c       0x28 main.o
-                0x0000025c                main
+                0x000000f2      0x184 Apllication/app.o
+                0x000000f2                password_check
+ .text.main     0x00000276       0x52 main.o
+                0x00000276                main
  .text.__vector_2
-                0x00000284       0x4a main.o
-                0x00000284                __vector_2
+                0x000002c8       0x4a main.o
+                0x000002c8                __vector_2
  .text.__vector_3
-                0x000002ce       0x4a main.o
-                0x000002ce                __vector_3
+                0x00000312       0x4a main.o
+                0x00000312                __vector_3
  .text.DIO_init
-                0x00000318       0xf0 MCAL/DIO Driver/dio.o
-                0x00000318                DIO_init
+                0x0000035c       0xf0 MCAL/DIO Driver/dio.o
+                0x0000035c                DIO_init
  .text.DIO_write
-                0x00000408       0xf0 MCAL/DIO Driver/dio.o
-                0x00000408                DIO_write
+                0x0000044c       0xf0 MCAL/DIO Driver/dio.o
+                0x0000044c                DIO_write
  .text.EEPROM_write
-                0x000004f8       0x16 MCAL/EEPROM/eerpom.o
-                0x000004f8                EEPROM_write
+                0x0000053c       0x16 MCAL/EEPROM/eerpom.o
+                0x0000053c                EEPROM_write
  .text.EEPROM_read
-                0x0000050e       0x10 MCAL/EEPROM/eerpom.o
-                0x0000050e                EEPROM_read
+                0x00000552       0x10 MCAL/EEPROM/eerpom.o
+                0x00000552                EEPROM_read
  .text.KEYPAD_init
-                0x0000051e        0xe MCAL/KeyPad/keypad.o
-                0x0000051e                KEYPAD_init
- .text.GET_KEY  0x0000052c      0x162 MCAL/KeyPad/keypad.o
-                0x0000052c                GET_KEY
+                0x00000562        0xe MCAL/KeyPad/keypad.o
+                0x00000562                KEYPAD_init
+ .text.GET_KEY  0x00000570      0x162 MCAL/KeyPad/keypad.o
+                0x00000570                GET_KEY
  .text.KEYPAD_start
-                0x0000068e       0x4e MCAL/KeyPad/keypad.o
-                0x0000068e                KEYPAD_start
+                0x000006d2       0x4e MCAL/KeyPad/keypad.o
+                0x000006d2                KEYPAD_start
  .text.LCD_4_bit_sendCommand
-                0x000006dc       0x7a MCAL/LCD/lcd.o
-                0x000006dc                LCD_4_bit_sendCommand
+                0x00000720       0x7a MCAL/LCD/lcd.o
+                0x00000720                LCD_4_bit_sendCommand
  .text.LCD_4_bit_init
-                0x00000756       0x44 MCAL/LCD/lcd.o
-                0x00000756                LCD_4_bit_init
+                0x0000079a       0x44 MCAL/LCD/lcd.o
+                0x0000079a                LCD_4_bit_init
  .text.LCD_4_bit_sendChar
-                0x0000079a       0x7a MCAL/LCD/lcd.o
-                0x0000079a                LCD_4_bit_sendChar
+                0x000007de       0x7a MCAL/LCD/lcd.o
+                0x000007de                LCD_4_bit_sendChar
  .text.LCD_4_bit_sendString
-                0x00000814       0x26 MCAL/LCD/lcd.o
-                0x00000814                LCD_4_bit_sendString
+                0x00000858       0x26 MCAL/LCD/lcd.o
+                0x00000858                LCD_4_bit_sendString
  .text.Spi_Master_init
-                0x0000083a       0x40 MCAL/SPI/spi.o
-                0x0000083a                Spi_Master_init
+                0x0000087e       0x40 MCAL/SPI/spi.o
+                0x0000087e                Spi_Master_init
  .text.Spi_Master_send
-                0x0000087a       0x28 MCAL/SPI/spi.o
-                0x0000087a                Spi_Master_send
+                0x000008be       0x28 MCAL/SPI/spi.o
+                0x000008be                Spi_Master_send
  .text.TIMER_set
-                0x000008a2       0x48 MCAL/TIMER0/timer0.o
-                0x000008a2                TIMER_set
+                0x000008e6       0x48 MCAL/TIMER0/timer0.o
+                0x000008e6                TIMER_set
  .text.TIMER_start
-                0x000008ea       0x6a MCAL/TIMER0/timer0.o
-                0x000008ea                TIMER_start
+                0x0000092e       0x6a MCAL/TIMER0/timer0.o
+                0x0000092e                TIMER_start
  .text.TIMER_overflow_read
-                0x00000954        0xe MCAL/TIMER0/timer0.o
-                0x00000954                TIMER_overflow_read
+                0x00000998        0xe MCAL/TIMER0/timer0.o
+                0x00000998                TIMER_overflow_read
  .text.TIMER_stop
-                0x00000962        0x4 MCAL/TIMER0/timer0.o
-                0x00000962                TIMER_stop
+                0x000009a6        0x4 MCAL/TIMER0/timer0.o
+                0x000009a6                TIMER_stop
  .text.TIMER0_delay
-                0x00000966      0x1f6 MCAL/TIMER0/timer0.o
-                0x00000966                TIMER0_delay
+                0x000009aa      0x1f6 MCAL/TIMER0/timer0.o
+                0x000009aa                TIMER0_delay
  .text.avr-libc.fplib
-                0x00000b5c        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x00000b5c                __subsf3
-                0x00000b5e                __addsf3
+                0x00000ba0        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00000ba0                __subsf3
+                0x00000ba2                __addsf3
  .text.avr-libc.fplib
-                0x00000b6a       0xcc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x00000b8c                __addsf3x
+                0x00000bae       0xcc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00000bd0                __addsf3x
  .text.avr-libc.fplib
-                0x00000c36       0x2e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ceil.o)
-                0x00000c36                ceil
+                0x00000c7a       0x2e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ceil.o)
+                0x00000c7a                ceil
  .text.avr-libc.fplib
-                0x00000c64        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                0x00000c64                __nesf2
-                0x00000c64                __eqsf2
-                0x00000c64                __cmpsf2
-                0x00000c64                __ltsf2
-                0x00000c64                __lesf2
+                0x00000ca8        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
+                0x00000ca8                __nesf2
+                0x00000ca8                __eqsf2
+                0x00000ca8                __cmpsf2
+                0x00000ca8                __ltsf2
+                0x00000ca8                __lesf2
  .text.avr-libc.fplib
-                0x00000c6e        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00000c6e                __divsf3
+                0x00000cb2        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00000cb2                __divsf3
  .text.avr-libc.fplib
-                0x00000c76       0xdc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x00000c96                __divsf3x
-                0x00000c9c                __divsf3_pse
+                0x00000cba       0xdc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00000cda                __divsf3x
+                0x00000ce0                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000d52       0x5e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00000d52                __fixunssfsi
+                0x00000d96       0x5e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00000d96                __fixunssfsi
  .text.avr-libc.fplib
-                0x00000db0       0x7a d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00000db0                __floatunsisf
-                0x00000db4                __floatsisf
+                0x00000df4       0x7a d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00000df4                __floatunsisf
+                0x00000df8                __floatsisf
  .text.avr-libc.fplib
-                0x00000e2a       0x48 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                0x00000e2a                __fp_cmp
+                0x00000e6e       0x48 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
+                0x00000e6e                __fp_cmp
  .text.avr-libc.fplib
-                0x00000e72        0xc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00000e72                __fp_inf
+                0x00000eb6        0xc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00000eb6                __fp_inf
  .text.avr-libc.fplib
-                0x00000e7e       0x36 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mintl.o)
-                0x00000e7e                __fp_mintl
+                0x00000ec2       0x36 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mintl.o)
+                0x00000ec2                __fp_mintl
  .text.avr-libc.fplib
-                0x00000eb4       0x1c d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
-                0x00000eb4                __fp_mpack
-                0x00000eb8                __fp_mpack_finite
+                0x00000ef8       0x1c d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x00000ef8                __fp_mpack
+                0x00000efc                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x00000ed0        0x6 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00000ed0                __fp_nan
+                0x00000f14        0x6 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00000f14                __fp_nan
  .text.avr-libc.fplib
-                0x00000ed6        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00000ed6                __fp_pscA
+                0x00000f1a        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00000f1a                __fp_pscA
  .text.avr-libc.fplib
-                0x00000ee4        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00000ee4                __fp_pscB
+                0x00000f28        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00000f28                __fp_pscB
  .text.avr-libc.fplib
-                0x00000ef2       0x22 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00000ef2                __fp_round
+                0x00000f36       0x22 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00000f36                __fp_round
  .text.avr-libc.fplib
-                0x00000f14       0x44 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00000f14                __fp_split3
-                0x00000f24                __fp_splitA
+                0x00000f58       0x44 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00000f58                __fp_split3
+                0x00000f68                __fp_splitA
  .text.avr-libc.fplib
-                0x00000f58       0x30 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_trunc.o)
-                0x00000f58                __fp_trunc
+                0x00000f9c       0x30 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_trunc.o)
+                0x00000f9c                __fp_trunc
  .text.avr-libc.fplib
-                0x00000f88        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00000f88                __fp_zero
-                0x00000f8a                __fp_szero
+                0x00000fcc        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00000fcc                __fp_zero
+                0x00000fce                __fp_szero
  .text.avr-libc.fplib
-                0x00000f96        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                0x00000f96                __gesf2
-                0x00000f96                __gtsf2
+                0x00000fda        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                0x00000fda                __gesf2
+                0x00000fda                __gtsf2
  .text.avr-libc.fplib
-                0x00000fa0        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x00000fa0                __mulsf3
+                0x00000fe4        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00000fe4                __mulsf3
  .text.avr-libc.fplib
-                0x00000fa8       0xd2 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x00000fc6                __mulsf3x
-                0x00000fcc                __mulsf3_pse
-                0x0000107a                . = ALIGN (0x2)
+                0x00000fec       0xd2 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x0000100a                __mulsf3x
+                0x00001010                __mulsf3_pse
+                0x000010be                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000107a        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000107a                _exit
-                0x0000107a                exit
+ .fini9         0x000010be        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000010be                _exit
+                0x000010be                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -681,11 +681,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000107a        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000010be        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000107e                _etext = .
+                0x000010c2                _etext = .
 
-.data           0x00800060       0x4e load address 0x0000107e
+.data           0x00800060       0x4e load address 0x000010c2
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -748,8 +748,8 @@ END GROUP
                 0x008000cf                Timer_initial_value
                 0x008000d0                Timer_Tick
                 0x008000d4                PROVIDE (__bss_end, .)
-                0x0000107e                __data_load_start = LOADADDR (.data)
-                0x000010cc                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000010c2                __data_load_start = LOADADDR (.data)
+                0x00001110                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000d4        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -849,41 +849,41 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1957
+.debug_info     0x00000000     0x1a28
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x5e2 Apllication/app.o
- .debug_info    0x00000ac8      0x21f main.o
- .debug_info    0x00000ce7      0x14d MCAL/DIO Driver/dio.o
- .debug_info    0x00000e34       0xaf MCAL/EEPROM/eerpom.o
- .debug_info    0x00000ee3      0x1df MCAL/KeyPad/keypad.o
- .debug_info    0x000010c2      0x480 MCAL/LCD/lcd.o
- .debug_info    0x00001542      0x23d MCAL/SPI/spi.o
- .debug_info    0x0000177f      0x1d8 MCAL/TIMER0/timer0.o
+ .debug_info    0x000004e6      0x627 Apllication/app.o
+ .debug_info    0x00000b0d      0x2ab main.o
+ .debug_info    0x00000db8      0x14d MCAL/DIO Driver/dio.o
+ .debug_info    0x00000f05       0xaf MCAL/EEPROM/eerpom.o
+ .debug_info    0x00000fb4      0x1df MCAL/KeyPad/keypad.o
+ .debug_info    0x00001193      0x480 MCAL/LCD/lcd.o
+ .debug_info    0x00001613      0x23d MCAL/SPI/spi.o
+ .debug_info    0x00001850      0x1d8 MCAL/TIMER0/timer0.o
 
-.debug_abbrev   0x00000000      0xb0c
+.debug_abbrev   0x00000000      0xaf4
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3       0xfa Apllication/app.o
- .debug_abbrev  0x0000059d       0xe4 main.o
- .debug_abbrev  0x00000681       0x87 MCAL/DIO Driver/dio.o
- .debug_abbrev  0x00000708       0x80 MCAL/EEPROM/eerpom.o
- .debug_abbrev  0x00000788       0xf1 MCAL/KeyPad/keypad.o
- .debug_abbrev  0x00000879       0xd9 MCAL/LCD/lcd.o
- .debug_abbrev  0x00000952       0xea MCAL/SPI/spi.o
- .debug_abbrev  0x00000a3c       0xd0 MCAL/TIMER0/timer0.o
+ .debug_abbrev  0x000004a3       0xe2 Apllication/app.o
+ .debug_abbrev  0x00000585       0xe4 main.o
+ .debug_abbrev  0x00000669       0x87 MCAL/DIO Driver/dio.o
+ .debug_abbrev  0x000006f0       0x80 MCAL/EEPROM/eerpom.o
+ .debug_abbrev  0x00000770       0xf1 MCAL/KeyPad/keypad.o
+ .debug_abbrev  0x00000861       0xd9 MCAL/LCD/lcd.o
+ .debug_abbrev  0x0000093a       0xea MCAL/SPI/spi.o
+ .debug_abbrev  0x00000a24       0xd0 MCAL/TIMER0/timer0.o
 
-.debug_line     0x00000000     0x11e0
+.debug_line     0x00000000     0x1255
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116      0x325 Apllication/app.o
- .debug_line    0x0000043b      0x146 main.o
- .debug_line    0x00000581      0x1d3 MCAL/DIO Driver/dio.o
- .debug_line    0x00000754       0xc3 MCAL/EEPROM/eerpom.o
- .debug_line    0x00000817      0x356 MCAL/KeyPad/keypad.o
- .debug_line    0x00000b6d      0x2b5 MCAL/LCD/lcd.o
- .debug_line    0x00000e22      0x18c MCAL/SPI/spi.o
- .debug_line    0x00000fae      0x232 MCAL/TIMER0/timer0.o
+ .debug_line    0x00000116      0x33a Apllication/app.o
+ .debug_line    0x00000450      0x1a6 main.o
+ .debug_line    0x000005f6      0x1d3 MCAL/DIO Driver/dio.o
+ .debug_line    0x000007c9       0xc3 MCAL/EEPROM/eerpom.o
+ .debug_line    0x0000088c      0x356 MCAL/KeyPad/keypad.o
+ .debug_line    0x00000be2      0x2b5 MCAL/LCD/lcd.o
+ .debug_line    0x00000e97      0x18c MCAL/SPI/spi.o
+ .debug_line    0x00001023      0x232 MCAL/TIMER0/timer0.o
 
 .debug_frame    0x00000000      0x3d0
  *(.debug_frame)
@@ -896,24 +896,24 @@ END GROUP
  .debug_frame   0x000002b4       0x6c MCAL/SPI/spi.o
  .debug_frame   0x00000320       0xb0 MCAL/TIMER0/timer0.o
 
-.debug_str      0x00000000      0x705
+.debug_str      0x00000000      0x747
  *(.debug_str)
  .debug_str     0x00000000      0x196 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x2c3 Apllication/app.o
-                                0x303 (size before relaxing)
- .debug_str     0x00000459       0x37 main.o
-                                0x1ef (size before relaxing)
- .debug_str     0x00000490       0x58 MCAL/DIO Driver/dio.o
+ .debug_str     0x00000196      0x2e9 Apllication/app.o
+                                0x329 (size before relaxing)
+ .debug_str     0x0000047f       0x27 main.o
+                                0x212 (size before relaxing)
+ .debug_str     0x000004a6       0x84 MCAL/DIO Driver/dio.o
                                 0x161 (size before relaxing)
- .debug_str     0x000004e8       0x32 MCAL/EEPROM/eerpom.o
+ .debug_str     0x0000052a       0x32 MCAL/EEPROM/eerpom.o
                                 0x145 (size before relaxing)
- .debug_str     0x0000051a       0x33 MCAL/KeyPad/keypad.o
+ .debug_str     0x0000055c       0x33 MCAL/KeyPad/keypad.o
                                 0x18d (size before relaxing)
- .debug_str     0x0000054d       0x7b MCAL/LCD/lcd.o
+ .debug_str     0x0000058f       0x7b MCAL/LCD/lcd.o
                                 0x1cf (size before relaxing)
- .debug_str     0x000005c8       0x5b MCAL/SPI/spi.o
-                                0x188 (size before relaxing)
- .debug_str     0x00000623       0xe2 MCAL/TIMER0/timer0.o
+ .debug_str     0x0000060a       0x5b MCAL/SPI/spi.o
+                                0x19e (size before relaxing)
+ .debug_str     0x00000665       0xe2 MCAL/TIMER0/timer0.o
                                 0x1fc (size before relaxing)
 
 .debug_loc      0x00000000      0x981

@@ -26,12 +26,12 @@ void Spi_Master_init(void)
 	SPSR &= ~ (1<<SPI2X);
 	
 }
-void Spi_Master_send(void)
+void Spi_Master_send(uint8_t request)
 {
 	
 	DIO_write(PORT_B,SS,LOW);
 	
-	SPDR = 'B';
+	SPDR = request;
 	
 	while(READ_BIT(SPSR,SPIF) == 0);
 	

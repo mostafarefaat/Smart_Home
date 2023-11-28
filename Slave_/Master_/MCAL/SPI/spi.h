@@ -35,7 +35,7 @@
 
 /*-----Functions declaration-----*/
 void Spi_Master_init(void);
-void Spi_Master_send(void);
+void Spi_Master_send(uint8_t request);
 void Spi_Master_receive(void);
 void Spi_Slave_init(void);
 uint8_t Spi_Slave_receive(void);
