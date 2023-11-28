@@ -7,8 +7,6 @@
 
 #include "Apllication/app.h"
 
-
-
 int main(void)
 {
 	app_init();
@@ -17,7 +15,11 @@ int main(void)
 	if(password_correct)
 	{
 		Spi_Master_send(Open_Door);
+		TIMER0_delay(2000,no_prescale);
+		Spi_Master_send(Open_Temp_LCD);
+		TIMER0_delay(2000,no_prescale);
 		Spi_Master_send(Turn_On);
+		
 		while(1)
 		{
 			app_start();
@@ -27,6 +29,7 @@ int main(void)
 ISR(EXT_INT_1)
 {
 	Spi_Master_send(Close_Door);
+
 }
 ISR(EXT_INT_2)
 {

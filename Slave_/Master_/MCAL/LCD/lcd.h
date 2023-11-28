@@ -17,9 +17,9 @@
 #define LCD_Data_PORT PORTC
 #define LCD_Data_PORT_Dir DDRC
 
-#define RS PIN0
-#define RW PIN1
-#define EN PIN2
+#define RS PIN2
+#define RW PIN3
+#define EN PIN4
 
 /*Macros for all the commands*/
 

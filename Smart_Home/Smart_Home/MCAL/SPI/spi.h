@@ -38,6 +38,7 @@
 #define Close_Door 0
 #define Turn_On 2
 #define Turn_Off 3
+#define Open_Temp_LCD 4
 
 /*-----Functions declaration-----*/
 void Spi_Master_init(void);

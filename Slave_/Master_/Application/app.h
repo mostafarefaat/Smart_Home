@@ -15,6 +15,8 @@
 #include "../ECUAL/Servo Motor/servo.h"
 #include "../MCAL/TIMER0/timer0.h"
 
+
+
 #ifndef APP_H_
 #define APP_H_
 
@@ -23,6 +25,7 @@
 #define Close_Door 0
 #define Turn_On 2
 #define Turn_Off 3
+#define Open_Temp_LCD 4
 
 uint8_t button_1_state;
 uint8_t button_2_state;

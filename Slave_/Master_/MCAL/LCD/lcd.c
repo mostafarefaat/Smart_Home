@@ -56,7 +56,7 @@ void LCD_8_bit_sendString(uint8_t *str)
 
 void LCD_4_bit_init(void)
 {
-	LCD_Command_Port_Dir |= (1<<0) | (1<<1) | (1<<2);  //Make PIN0, PIN1, PIN2 in PORTD outputs
+	LCD_Command_Port_Dir |= (1<<2) | (1<<3) | (1<<4);  //Make PIN0, PIN1, PIN2 in PORTD outputs
 	LCD_Data_PORT_Dir |= (1<<4) | (1<<5) | (1<<6) | (1<<7); //Make PIN4, PIN5, PIN6, PIN7 in PORTC outputs
 	TIMER_set(Normal);
 	TIMER0_delay(20, no_prescale);	//LCD power ON delay always >15ms
