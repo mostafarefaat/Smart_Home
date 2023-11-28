@@ -270,8 +270,8 @@ void Temp_sensor_read(void)
  19c:	10 92 79 00 	sts	0x0079, r1	; 0x800079 <decimal>
  1a0:	81 e0       	ldi	r24, 0x01	; 1
  1a2:	90 e0       	ldi	r25, 0x00	; 0
- 1a4:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__data_start+0x1>
- 1a8:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+ 1a4:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 1a8:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
  1ac:	10 92 78 00 	sts	0x0078, r1	; 0x800078 <__data_end>
 	uint8_t index = 0;
  1b0:	30 e0       	ldi	r19, 0x00	; 0
