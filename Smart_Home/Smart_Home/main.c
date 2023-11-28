@@ -19,7 +19,7 @@ int main(void)
 		Spi_Master_send(Open_Temp_LCD);
 		TIMER0_delay(2000,no_prescale);
 		Spi_Master_send(Turn_On);
-		
+		TIMER0_delay(2000,no_prescale);
 		while(1)
 		{
 			app_start();

@@ -16,28 +16,32 @@ uint8_t data;
 uint8_t welcome_string[] = "Welcome";
 uint8_t done_string[] = "ADC value is:";
 
+uint8_t value[4];
+
+
 volatile uint16_t digital_value = 0;
 volatile uint16_t decimal = 0,weight = 1;
-volatile uint8_t rem = 0 ;
-volatile uint8_t x1=0;
+volatile uint8_t rem = 0;
 
 void app_init(void)
 {
-	
+	/*DIO PINS Config*/
 	DIO_init(PORT_D,PIN5,OUT); /*Makes PIN5 in PORT D output pin and initiate it by low*/
 	DIO_init(PORT_D,PIN6,OUT); /*Makes PIN6 in PORT D output pin and initiate it by low*/
 	DIO_init(PORT_D,PIN7,OUT); /*Makes PIN7 in PORT D output pin and initiate it by low*/
 		
 	DIO_write(PORT_D,PIN5,LOW);
 	DIO_write(PORT_D,PIN6,LOW);
-	DIO_write(PORT_D,PIN7,LOW);	
+	DIO_write(PORT_D,PIN7,LOW);
 	
+	/*SPI and LCD initialize*/
 	Spi_Slave_init();
 	LCD_4_bit_init();
-	ADC_init();	
-
+	
 	//ADC initializing
-	DDRA &= ~(1<<0);
+	DIO_init(PORT_A,PIN0,IN);
+	ADC_init();
+
 }
 
 void app_start(void)
@@ -61,30 +65,58 @@ void app_start(void)
 			DIO_write(PORT_D,PIN6,HIGH); 
 			DIO_write(PORT_D,PIN7,HIGH);
 			break; 
+			
 		case Turn_Off:
 			DIO_write(PORT_D,PIN6,LOW);
 			DIO_write(PORT_D,PIN7,LOW);
-			break; 
+			break;
+		case Get_Temp:
+			 Temp_sensor_read();
+		default: break;
 	}
 	
-	// Read the value from ADC
-	digital_value = ADC_read(ADC_CH_0);
-	decimal = 0; weight = 1; rem = 0;
-	LCD_4_bit_sendCommand(0x01);
-	LCD_4_bit_sendString(done_string);
-	TIMER0_delay(3000,no_prescale);
-	LCD_4_bit_sendCommand(0x01);
-	
-	while(digital_value != 0)
-	{
-	LCD_4_bit_sendChar((digital_value % 10) + (0x30));
-	digital_value = digital_value/10;		
-	}
+
 	
 }
-
-
-
+void clear_temp_string(uint8_t *str)
+{
+		uint8_t i;
+		for(i=0; *(str + i) != 0; i++)	//send each character until str is null
+		{
+			*(str + i) = 0x20; // reset them to white spaces
+		}
+}
+void display_Temp_on_LCD(void)
+{
+	LCD_4_bit_sendChar(value[3]);
+	LCD_4_bit_sendChar(value[2]);
+	LCD_4_bit_sendChar(value[1]);
+	LCD_4_bit_sendChar(value[0]);	
+}
+void Temp_sensor_read(void)
+{
+	LCD_4_bit_sendCommand(0x01); //clears the LCD
+	
+	digital_value = ADC_read(ADC_CH_0); // Read the value from ADC
+	
+	LCD_4_bit_sendString(done_string); // indicates the conversion finished
+	
+	TIMER0_delay(2000,no_prescale);
+	
+	LCD_4_bit_sendCommand(0x01); //clears the LCD
+	
+	decimal = 0; weight = 1; rem = 0;
+	uint8_t index = 0;
+	/*Extracts the each number and put it in the value string for display*/
+	while(digital_value != 0)
+	{
+		value[index] = (digital_value % 10) + (0x30);
+		digital_value = digital_value/10;
+		index++;
+	}
+	display_Temp_on_LCD();
+	clear_temp_string(value); // resets the value strings	
+}
 
 
 

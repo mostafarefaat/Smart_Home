@@ -33,6 +33,7 @@ void LCD_4_bit_init(void);
 void LCD_4_bit_sendCommand(uint8_t command);
 void LCD_4_bit_sendChar(uint8_t character);
 void LCD_4_bit_sendString(uint8_t *str);
+void LCD_4_bit_sendString_reverse(uint8_t *str);
 
 	
 

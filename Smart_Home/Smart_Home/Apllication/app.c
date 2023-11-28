@@ -43,7 +43,8 @@ void app_start(void)
 {	
 	if(ISR_State == ISR_Not_Called)
 	{
-		
+		Spi_Master_send(Get_Temp);
+		TIMER0_delay(5000,no_prescale);
 	}
 	
 }

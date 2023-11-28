@@ -34,11 +34,12 @@
 #define SCK 7
 
 /*-----Orders-----*/
-#define Open_Door 1
 #define Close_Door 0
+#define Open_Door 1
 #define Turn_On 2
 #define Turn_Off 3
 #define Open_Temp_LCD 4
+#define Get_Temp 5
 
 /*-----Functions declaration-----*/
 void Spi_Master_init(void);
