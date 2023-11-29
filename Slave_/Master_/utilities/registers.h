@@ -52,6 +52,7 @@
 
 /*-------------------------------------------------- TIMER 0 REGISTERS--------------------------------------------------*/
 
+#define OCR0 *((volatile uint8_t *)0x5C)
 #define TCCR0 *((volatile uint8_t *)0x53)
 #define TCNT0 *((volatile uint8_t *)0x52)
 
