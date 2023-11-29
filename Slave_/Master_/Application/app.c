@@ -18,7 +18,7 @@ uint8_t done_string[] = "Temp in C = ";
 
 uint8_t value[4];
 
-uint8_t Sensor_value;
+uint8_t Sensor_value, Sensor_value_copy;
 
 volatile uint16_t digital_value = 0;
 volatile uint16_t decimal = 0,weight = 1;
@@ -30,7 +30,7 @@ void app_init(void)
 	DIO_init(PORT_D,PIN5,OUT); DIO_write(PORT_D,PIN5,LOW); /*Makes PIN5 in PORT D output pin and initiate it by low*/
 	DIO_init(PORT_D,PIN6,OUT); DIO_write(PORT_D,PIN6,LOW); /*Makes PIN6 in PORT D output pin and initiate it by low*/
 	DIO_init(PORT_D,PIN7,OUT); DIO_write(PORT_D,PIN7,LOW); /*Makes PIN7 in PORT D output pin and initiate it by low*/
-	DIO_init(PORT_C,PIN0,OUT); DIO_write(PORT_C,PIN0,LOW); /*Makes PIN0 in PORT C output pin and initiate it by low*/
+	DIO_init(PORT_B,PIN3,OUT); DIO_write(PORT_B,PIN3,LOW); /*Makes PIN3 in PORT B output pin and initiate it by low*/
 	
 	/*SPI and LCD initialize*/
 	Spi_Slave_init();
@@ -72,6 +72,17 @@ void app_start(void)
 			 Temp_sensor_read();
 		default: break;
 	}
+
+	if(Sensor_value_copy >= 25)
+	{
+		TCCR0 = 0x61;
+		OCR0 = 100;
+	}
+	else
+	{
+		TCCR0 = 0x00;
+	}
+	
 }
 void clear_temp_string(uint8_t *str)
 {
@@ -94,16 +105,9 @@ void Temp_sensor_read(void)
 	
 	Sensor_value = (digital_value * (ADC_STEP)) * 10;
 	
-	LCD_4_bit_sendString(done_string); // indicates the conversion finished
+	Sensor_value_copy = Sensor_value;
 	
-	if(Sensor_value >= 30)
-	{
-		DIO_write(PORT_C,PIN0,HIGH); // FAN ON
-	}
-	else
-	{
-		DIO_write(PORT_C,PIN0,LOW); // FAN OFF
-	}
+	LCD_4_bit_sendString(done_string); // indicates the conversion finished
 	
 	decimal = 0; weight = 1; rem = 0;
 	uint8_t index = 0;
