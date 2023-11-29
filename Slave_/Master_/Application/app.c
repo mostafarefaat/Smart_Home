@@ -80,7 +80,7 @@ void app_start(void)
 	}
 	else
 	{
-		TCCR0 = 0x00;
+		TCCR0 = 75;
 	}
 	
 }
