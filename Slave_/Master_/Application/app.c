@@ -49,9 +49,9 @@ void app_start(void)
 	
 	switch(data)
 	{
-		case Open_Door: servo_move_180_deg(); break;
+		case Open_Door: servo_move_90_deg(); break;
 		
-		case Close_Door: servo_move_zero_deg(); break;
+		case Close_Door: servo_move_negative_90_deg(); break;
 		
 		case Open_Temp_LCD:
 		LCD_4_bit_sendString(welcome_string);

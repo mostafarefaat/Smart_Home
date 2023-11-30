@@ -44,6 +44,12 @@ Application/app.d Application/app.o: ../Application/app.c \
  c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.h \
  c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h \
  ../Application/../ECUAL/Servo\ Motor/servo.h \
+ ../Application/../ECUAL/Servo\ Motor/../../MCAL/TIMER0/timer0.h \
+ c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h \
+ c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.h \
+ ../Application/../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/dio.h \
+ c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h \
+ c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.h \
  ../Application/../MCAL/TIMER0/timer0.h \
  ../Application/../MCAL/TIMER0/../../utilities/registers.h \
  ../Application/../MCAL/TIMER0/../../utilities/types.h \
@@ -140,6 +146,18 @@ c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.
 c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h:
 
 ../Application/../ECUAL/Servo\ Motor/servo.h:
+
+../Application/../ECUAL/Servo\ Motor/../../MCAL/TIMER0/timer0.h:
+
+c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h:
+
+c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.h:
+
+../Application/../ECUAL/Servo\ Motor/../../MCAL/DIO\ Driver/dio.h:
+
+c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\registers.h:
+
+c:\users\mosta\my_projects\smart_home\slave_\master_\utilities\bit_manipulation.h:
 
 ../Application/../MCAL/TIMER0/timer0.h:
 

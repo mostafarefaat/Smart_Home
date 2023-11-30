@@ -5,28 +5,53 @@
  *  Author: mosta
  */ 
 //include .h
-#include "../../MCAL/DIO Driver/dio.h"
-#include "servo.h"
-#include <util/delay.h>
 
-void servo_move_zero_deg(void)
-{
-	  DIO_write(PORT_D,PIN5,HIGH);
-	  _delay_ms(1);
-	  DIO_write(PORT_D,PIN5,LOW);
-	  _delay_ms(2000);
-}
+#include "servo.h"
+
+
 void servo_move_90_deg(void)
 {
 	  DIO_write(PORT_D,PIN5,HIGH);
-	  _delay_ms(1.5);
+	  Servo_T0Delay_90();
 	  DIO_write(PORT_D,PIN5,LOW);
-	  _delay_ms(2000);	
+	  TIMER0_delay(2000,no_prescale);	
 }
-void servo_move_180_deg(void)
+void servo_move_negative_90_deg(void)
 {
-	  DIO_write(PORT_D,PIN5,HIGH);
-	  _delay_ms(2);
-	  DIO_write(PORT_D,PIN5,LOW);
-	  _delay_ms(2000);
+	  PORTD |= (1<<5);
+	  Servo_T0Delay_negative_90();
+	  PORTD &= ~(1<<5);
+	  TIMER0_delay(2000,no_prescale);
+}
+
+
+void Servo_T0Delay_90()
+{
+	unsigned int i = 0;
+	
+	while(i<10)  /*value of i by testing*/
+	{
+		TCNT0 = 0x00;
+		TCCR0 = 0x01;
+		while((TIFR & (1<<PIN0)) == 0);
+		TCCR0 = 0x00;
+		TIFR |= (1<<0);
+		i++;
+	}
+
+}
+
+void Servo_T0Delay_negative_90()
+{
+	unsigned int i = 0;
+	
+	while(i<2)  /*value of i by testing*/
+	{
+		TCNT0 = 0x00;
+		TCCR0 = 0x01;
+		while((TIFR & (1<<PIN0)) == 0);
+		TCCR0 = 0x00;
+		TIFR |= (1<<0);
+		i++;
+	}
 }

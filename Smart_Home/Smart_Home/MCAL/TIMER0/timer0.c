@@ -104,17 +104,17 @@ void TIMER0_delay(uint16_t Time_delay, uint16_t prescale)
 {
 	Time_delay_ = Time_delay*0.001;
 	
-	Timer_Tick = ( (prescale) / (pow(10.0,6.0)) );
+	Timer_Tick = ( (prescale) / (CPU_Frequency) );
 	
 	Timer_Delay_max = 	(Timer_Tick) * (256.0);
 	
-	if(Time_delay < Timer_Delay_max)
+	if(Time_delay_ < Timer_Delay_max)
 	{
-		Timer_initial_value = ( (Timer_Delay_max - Time_delay ) / (Timer_Tick) );
+		Timer_initial_value = ( (Timer_Delay_max - Time_delay_ ) / (Timer_Tick) );
 			
 		Number_of_overflows_needed = 1;
 	}
-	else if(Time_delay == Timer_Delay_max)
+	else if(Time_delay_ == Timer_Delay_max)
 	{
 		Timer_initial_value = 0x00;
 		Number_of_overflows_needed = 1;
