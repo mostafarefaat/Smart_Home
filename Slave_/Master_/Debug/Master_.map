@@ -835,17 +835,17 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x18ae
+.debug_info     0x00000000     0x1891
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6      0x555 Application/app.o
- .debug_info    0x00000a3b      0x309 ECUAL/Servo Motor/servo.o
- .debug_info    0x00000d44       0xba main.o
- .debug_info    0x00000dfe       0x8e MCAL/ADC/adc.o
- .debug_info    0x00000e8c      0x14d MCAL/DIO Driver/dio.o
- .debug_info    0x00000fd9      0x4c0 MCAL/LCD/lcd.o
- .debug_info    0x00001499      0x23d MCAL/SPI/spi.o
- .debug_info    0x000016d6      0x1d8 MCAL/TIMER0/timer0.o
+ .debug_info    0x00000a3b      0x2ec ECUAL/Servo Motor/servo.o
+ .debug_info    0x00000d27       0xba main.o
+ .debug_info    0x00000de1       0x8e MCAL/ADC/adc.o
+ .debug_info    0x00000e6f      0x14d MCAL/DIO Driver/dio.o
+ .debug_info    0x00000fbc      0x4c0 MCAL/LCD/lcd.o
+ .debug_info    0x0000147c      0x23d MCAL/SPI/spi.o
+ .debug_info    0x000016b9      0x1d8 MCAL/TIMER0/timer0.o
 
 .debug_abbrev   0x00000000      0xad1
  *(.debug_abbrev)
@@ -859,17 +859,17 @@ END GROUP
  .debug_abbrev  0x00000917       0xea MCAL/SPI/spi.o
  .debug_abbrev  0x00000a01       0xd0 MCAL/TIMER0/timer0.o
 
-.debug_line     0x00000000      0xfb9
+.debug_line     0x00000000      0xfe0
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116      0x31e Application/app.o
- .debug_line    0x00000434      0x1a9 ECUAL/Servo Motor/servo.o
- .debug_line    0x000005dd       0xa9 main.o
- .debug_line    0x00000686       0xaa MCAL/ADC/adc.o
- .debug_line    0x00000730      0x1d3 MCAL/DIO Driver/dio.o
- .debug_line    0x00000903      0x2f2 MCAL/LCD/lcd.o
- .debug_line    0x00000bf5      0x192 MCAL/SPI/spi.o
- .debug_line    0x00000d87      0x232 MCAL/TIMER0/timer0.o
+ .debug_line    0x00000434      0x1d0 ECUAL/Servo Motor/servo.o
+ .debug_line    0x00000604       0xa9 main.o
+ .debug_line    0x000006ad       0xaa MCAL/ADC/adc.o
+ .debug_line    0x00000757      0x1d3 MCAL/DIO Driver/dio.o
+ .debug_line    0x0000092a      0x2f2 MCAL/LCD/lcd.o
+ .debug_line    0x00000c1c      0x192 MCAL/SPI/spi.o
+ .debug_line    0x00000dae      0x232 MCAL/TIMER0/timer0.o
 
 .debug_frame    0x00000000      0x360
  *(.debug_frame)
@@ -888,7 +888,7 @@ END GROUP
  .debug_str     0x00000196      0x2b4 Application/app.o
                                 0x2c7 (size before relaxing)
  .debug_str     0x0000044a       0x9f ECUAL/Servo Motor/servo.o
-                                0x1f8 (size before relaxing)
+                                0x205 (size before relaxing)
  .debug_str     0x000004e9       0x11 main.o
                                 0x14b (size before relaxing)
  .debug_str     0x000004fa       0x1a MCAL/ADC/adc.o
@@ -902,15 +902,15 @@ END GROUP
  .debug_str     0x00000654       0xe2 MCAL/TIMER0/timer0.o
                                 0x20b (size before relaxing)
 
-.debug_loc      0x00000000      0xa61
+.debug_loc      0x00000000      0x9d5
  *(.debug_loc)
  .debug_loc     0x00000000       0x95 Application/app.o
- .debug_loc     0x00000095      0x1aa ECUAL/Servo Motor/servo.o
- .debug_loc     0x0000023f       0x21 MCAL/ADC/adc.o
- .debug_loc     0x00000260      0x278 MCAL/DIO Driver/dio.o
- .debug_loc     0x000004d8      0x2a9 MCAL/LCD/lcd.o
- .debug_loc     0x00000781       0x4e MCAL/SPI/spi.o
- .debug_loc     0x000007cf      0x292 MCAL/TIMER0/timer0.o
+ .debug_loc     0x00000095      0x11e ECUAL/Servo Motor/servo.o
+ .debug_loc     0x000001b3       0x21 MCAL/ADC/adc.o
+ .debug_loc     0x000001d4      0x278 MCAL/DIO Driver/dio.o
+ .debug_loc     0x0000044c      0x2a9 MCAL/LCD/lcd.o
+ .debug_loc     0x000006f5       0x4e MCAL/SPI/spi.o
+ .debug_loc     0x00000743      0x292 MCAL/TIMER0/timer0.o
 
 .debug_macinfo
  *(.debug_macinfo)

@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 000001d0  00000000  00000000  00000f90  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   000018ae  00000000  00000000  00001160  2**0
+  6 .debug_info   00001891  00000000  00000000  00001160  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000ad1  00000000  00000000  00002a0e  2**0
+  7 .debug_abbrev 00000ad1  00000000  00000000  000029f1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000fb9  00000000  00000000  000034df  2**0
+  8 .debug_line   00000fe0  00000000  00000000  000034c2  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000360  00000000  00000000  00004498  2**2
+  9 .debug_frame  00000360  00000000  00000000  000044a4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000736  00000000  00000000  000047f8  2**0
+ 10 .debug_str    00000736  00000000  00000000  00004804  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000a61  00000000  00000000  00004f2e  2**0
+ 11 .debug_loc    000009d5  00000000  00000000  00004f3a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000150  00000000  00000000  0000598f  2**0
+ 12 .debug_ranges 00000150  00000000  00000000  0000590f  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -425,22 +425,21 @@ void app_start(void)
  278:	65 e0       	ldi	r22, 0x05	; 5
  27a:	84 e4       	ldi	r24, 0x44	; 68
  27c:	0e 94 04 02 	call	0x408	; 0x408 <DIO_write>
- 280:	89 ef       	ldi	r24, 0xF9	; 249
- 282:	90 e0       	ldi	r25, 0x00	; 0
- 284:	01 97       	sbiw	r24, 0x01	; 1
- 286:	f1 f7       	brne	.-4      	; 0x284 <servo_move_zero_deg+0xe>
- 288:	00 c0       	rjmp	.+0      	; 0x28a <servo_move_zero_deg+0x14>
- 28a:	00 00       	nop
+ 280:	60 e0       	ldi	r22, 0x00	; 0
+ 282:	74 e0       	ldi	r23, 0x04	; 4
+ 284:	81 e0       	ldi	r24, 0x01	; 1
+ 286:	90 e0       	ldi	r25, 0x00	; 0
+ 288:	0e 94 b0 03 	call	0x760	; 0x760 <TIMER0_delay>
  28c:	40 e0       	ldi	r20, 0x00	; 0
  28e:	65 e0       	ldi	r22, 0x05	; 5
  290:	84 e4       	ldi	r24, 0x44	; 68
  292:	0e 94 04 02 	call	0x408	; 0x408 <DIO_write>
- 296:	9f e7       	ldi	r25, 0x7F	; 127
- 298:	2a e1       	ldi	r18, 0x1A	; 26
- 29a:	86 e0       	ldi	r24, 0x06	; 6
- 29c:	91 50       	subi	r25, 0x01	; 1
- 29e:	20 40       	sbci	r18, 0x00	; 0
- 2a0:	80 40       	sbci	r24, 0x00	; 0
+ 296:	2f e7       	ldi	r18, 0x7F	; 127
+ 298:	8a e1       	ldi	r24, 0x1A	; 26
+ 29a:	96 e0       	ldi	r25, 0x06	; 6
+ 29c:	21 50       	subi	r18, 0x01	; 1
+ 29e:	80 40       	sbci	r24, 0x00	; 0
+ 2a0:	90 40       	sbci	r25, 0x00	; 0
  2a2:	e1 f7       	brne	.-8      	; 0x29c <servo_move_zero_deg+0x26>
  2a4:	00 c0       	rjmp	.+0      	; 0x2a6 <servo_move_zero_deg+0x30>
  2a6:	00 00       	nop
@@ -457,24 +456,24 @@ void servo_move_180_deg(void)
  2ac:	65 e0       	ldi	r22, 0x05	; 5
  2ae:	84 e4       	ldi	r24, 0x44	; 68
  2b0:	0e 94 04 02 	call	0x408	; 0x408 <DIO_write>
- 2b4:	83 ef       	ldi	r24, 0xF3	; 243
- 2b6:	91 e0       	ldi	r25, 0x01	; 1
- 2b8:	01 97       	sbiw	r24, 0x01	; 1
- 2ba:	f1 f7       	brne	.-4      	; 0x2b8 <servo_move_180_deg+0xe>
- 2bc:	00 c0       	rjmp	.+0      	; 0x2be <servo_move_180_deg+0x14>
- 2be:	00 00       	nop
-	  _delay_ms(2);
+	  TIMER0_delay(2,prescale1024);
+ 2b4:	60 e0       	ldi	r22, 0x00	; 0
+ 2b6:	74 e0       	ldi	r23, 0x04	; 4
+ 2b8:	82 e0       	ldi	r24, 0x02	; 2
+ 2ba:	90 e0       	ldi	r25, 0x00	; 0
+ 2bc:	0e 94 b0 03 	call	0x760	; 0x760 <TIMER0_delay>
+	  //_delay_ms(2);
 	  DIO_write(PORT_D,PIN5,LOW);
  2c0:	40 e0       	ldi	r20, 0x00	; 0
  2c2:	65 e0       	ldi	r22, 0x05	; 5
  2c4:	84 e4       	ldi	r24, 0x44	; 68
  2c6:	0e 94 04 02 	call	0x408	; 0x408 <DIO_write>
- 2ca:	9f e7       	ldi	r25, 0x7F	; 127
- 2cc:	2a e1       	ldi	r18, 0x1A	; 26
- 2ce:	86 e0       	ldi	r24, 0x06	; 6
- 2d0:	91 50       	subi	r25, 0x01	; 1
- 2d2:	20 40       	sbci	r18, 0x00	; 0
- 2d4:	80 40       	sbci	r24, 0x00	; 0
+ 2ca:	2f e7       	ldi	r18, 0x7F	; 127
+ 2cc:	8a e1       	ldi	r24, 0x1A	; 26
+ 2ce:	96 e0       	ldi	r25, 0x06	; 6
+ 2d0:	21 50       	subi	r18, 0x01	; 1
+ 2d2:	80 40       	sbci	r24, 0x00	; 0
+ 2d4:	90 40       	sbci	r25, 0x00	; 0
  2d6:	e1 f7       	brne	.-8      	; 0x2d0 <servo_move_180_deg+0x26>
  2d8:	00 c0       	rjmp	.+0      	; 0x2da <servo_move_180_deg+0x30>
  2da:	00 00       	nop
