@@ -430,7 +430,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x10c2
+.text           0x00000000     0x1090
  *(.vectors)
  .vectors       0x00000000       0x54 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -578,91 +578,91 @@ END GROUP
                 0x000009a6        0x4 MCAL/TIMER0/timer0.o
                 0x000009a6                TIMER_stop
  .text.TIMER0_delay
-                0x000009aa      0x1f6 MCAL/TIMER0/timer0.o
+                0x000009aa      0x1c4 MCAL/TIMER0/timer0.o
                 0x000009aa                TIMER0_delay
  .text.avr-libc.fplib
-                0x00000ba0        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x00000ba0                __subsf3
-                0x00000ba2                __addsf3
+                0x00000b6e        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00000b6e                __subsf3
+                0x00000b70                __addsf3
  .text.avr-libc.fplib
-                0x00000bae       0xcc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x00000bd0                __addsf3x
+                0x00000b7c       0xcc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00000b9e                __addsf3x
  .text.avr-libc.fplib
-                0x00000c7a       0x2e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ceil.o)
-                0x00000c7a                ceil
+                0x00000c48       0x2e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ceil.o)
+                0x00000c48                ceil
  .text.avr-libc.fplib
-                0x00000ca8        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                0x00000ca8                __nesf2
-                0x00000ca8                __eqsf2
-                0x00000ca8                __cmpsf2
-                0x00000ca8                __ltsf2
-                0x00000ca8                __lesf2
+                0x00000c76        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
+                0x00000c76                __nesf2
+                0x00000c76                __eqsf2
+                0x00000c76                __cmpsf2
+                0x00000c76                __ltsf2
+                0x00000c76                __lesf2
  .text.avr-libc.fplib
-                0x00000cb2        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00000cb2                __divsf3
+                0x00000c80        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00000c80                __divsf3
  .text.avr-libc.fplib
-                0x00000cba       0xdc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x00000cda                __divsf3x
-                0x00000ce0                __divsf3_pse
+                0x00000c88       0xdc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00000ca8                __divsf3x
+                0x00000cae                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000d96       0x5e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00000d96                __fixunssfsi
+                0x00000d64       0x5e d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00000d64                __fixunssfsi
  .text.avr-libc.fplib
-                0x00000df4       0x7a d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00000df4                __floatunsisf
-                0x00000df8                __floatsisf
+                0x00000dc2       0x7a d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00000dc2                __floatunsisf
+                0x00000dc6                __floatsisf
  .text.avr-libc.fplib
-                0x00000e6e       0x48 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                0x00000e6e                __fp_cmp
+                0x00000e3c       0x48 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
+                0x00000e3c                __fp_cmp
  .text.avr-libc.fplib
-                0x00000eb6        0xc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00000eb6                __fp_inf
+                0x00000e84        0xc d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00000e84                __fp_inf
  .text.avr-libc.fplib
-                0x00000ec2       0x36 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mintl.o)
-                0x00000ec2                __fp_mintl
+                0x00000e90       0x36 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mintl.o)
+                0x00000e90                __fp_mintl
  .text.avr-libc.fplib
-                0x00000ef8       0x1c d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
-                0x00000ef8                __fp_mpack
-                0x00000efc                __fp_mpack_finite
+                0x00000ec6       0x1c d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x00000ec6                __fp_mpack
+                0x00000eca                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x00000f14        0x6 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00000f14                __fp_nan
+                0x00000ee2        0x6 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00000ee2                __fp_nan
  .text.avr-libc.fplib
-                0x00000f1a        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00000f1a                __fp_pscA
+                0x00000ee8        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00000ee8                __fp_pscA
  .text.avr-libc.fplib
-                0x00000f28        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00000f28                __fp_pscB
+                0x00000ef6        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00000ef6                __fp_pscB
  .text.avr-libc.fplib
-                0x00000f36       0x22 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00000f36                __fp_round
+                0x00000f04       0x22 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00000f04                __fp_round
  .text.avr-libc.fplib
-                0x00000f58       0x44 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00000f58                __fp_split3
-                0x00000f68                __fp_splitA
+                0x00000f26       0x44 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00000f26                __fp_split3
+                0x00000f36                __fp_splitA
  .text.avr-libc.fplib
-                0x00000f9c       0x30 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_trunc.o)
-                0x00000f9c                __fp_trunc
+                0x00000f6a       0x30 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_trunc.o)
+                0x00000f6a                __fp_trunc
  .text.avr-libc.fplib
-                0x00000fcc        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00000fcc                __fp_zero
-                0x00000fce                __fp_szero
+                0x00000f9a        0xe d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00000f9a                __fp_zero
+                0x00000f9c                __fp_szero
  .text.avr-libc.fplib
-                0x00000fda        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                0x00000fda                __gesf2
-                0x00000fda                __gtsf2
+                0x00000fa8        0xa d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                0x00000fa8                __gesf2
+                0x00000fa8                __gtsf2
  .text.avr-libc.fplib
-                0x00000fe4        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x00000fe4                __mulsf3
+                0x00000fb2        0x8 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00000fb2                __mulsf3
  .text.avr-libc.fplib
-                0x00000fec       0xd2 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x0000100a                __mulsf3x
-                0x00001010                __mulsf3_pse
-                0x000010be                . = ALIGN (0x2)
+                0x00000fba       0xd2 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x00000fd8                __mulsf3x
+                0x00000fde                __mulsf3_pse
+                0x0000108c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000010be        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000010be                _exit
-                0x000010be                exit
+ .fini9         0x0000108c        0x0 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000108c                _exit
+                0x0000108c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -681,11 +681,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000010be        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000108c        0x4 d:/microship_studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000010c2                _etext = .
+                0x00001090                _etext = .
 
-.data           0x00800060       0x4e load address 0x000010c2
+.data           0x00800060       0x4e load address 0x00001090
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -748,8 +748,8 @@ END GROUP
                 0x008000cf                Timer_initial_value
                 0x008000d0                Timer_Tick
                 0x008000d4                PROVIDE (__bss_end, .)
-                0x000010c2                __data_load_start = LOADADDR (.data)
-                0x00001110                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001090                __data_load_start = LOADADDR (.data)
+                0x000010de                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000d4        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -849,7 +849,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1a28
+.debug_info     0x00000000     0x1a26
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 D:/MicroShip_Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6      0x627 Apllication/app.o
@@ -859,7 +859,7 @@ END GROUP
  .debug_info    0x00000fb4      0x1df MCAL/KeyPad/keypad.o
  .debug_info    0x00001193      0x480 MCAL/LCD/lcd.o
  .debug_info    0x00001613      0x23d MCAL/SPI/spi.o
- .debug_info    0x00001850      0x1d8 MCAL/TIMER0/timer0.o
+ .debug_info    0x00001850      0x1d6 MCAL/TIMER0/timer0.o
 
 .debug_abbrev   0x00000000      0xaf4
  *(.debug_abbrev)
@@ -885,7 +885,7 @@ END GROUP
  .debug_line    0x00000e97      0x18c MCAL/SPI/spi.o
  .debug_line    0x00001023      0x232 MCAL/TIMER0/timer0.o
 
-.debug_frame    0x00000000      0x3d0
+.debug_frame    0x00000000      0x3cc
  *(.debug_frame)
  .debug_frame   0x00000000       0x50 Apllication/app.o
  .debug_frame   0x00000050       0xd4 main.o
@@ -894,7 +894,7 @@ END GROUP
  .debug_frame   0x000001ac       0x44 MCAL/KeyPad/keypad.o
  .debug_frame   0x000001f0       0xc4 MCAL/LCD/lcd.o
  .debug_frame   0x000002b4       0x6c MCAL/SPI/spi.o
- .debug_frame   0x00000320       0xb0 MCAL/TIMER0/timer0.o
+ .debug_frame   0x00000320       0xac MCAL/TIMER0/timer0.o
 
 .debug_str      0x00000000      0x747
  *(.debug_str)
@@ -908,15 +908,15 @@ END GROUP
  .debug_str     0x0000052a       0x32 MCAL/EEPROM/eerpom.o
                                 0x145 (size before relaxing)
  .debug_str     0x0000055c       0x33 MCAL/KeyPad/keypad.o
-                                0x18d (size before relaxing)
+                                0x1a3 (size before relaxing)
  .debug_str     0x0000058f       0x7b MCAL/LCD/lcd.o
-                                0x1cf (size before relaxing)
+                                0x1e5 (size before relaxing)
  .debug_str     0x0000060a       0x5b MCAL/SPI/spi.o
                                 0x19e (size before relaxing)
  .debug_str     0x00000665       0xe2 MCAL/TIMER0/timer0.o
-                                0x1fc (size before relaxing)
+                                0x212 (size before relaxing)
 
-.debug_loc      0x00000000      0x981
+.debug_loc      0x00000000      0x96c
  *(.debug_loc)
  .debug_loc     0x00000000       0x2f Apllication/app.o
  .debug_loc     0x0000002f      0x196 main.o
@@ -924,7 +924,7 @@ END GROUP
  .debug_loc     0x0000043d       0x4c MCAL/EEPROM/eerpom.o
  .debug_loc     0x00000489      0x218 MCAL/LCD/lcd.o
  .debug_loc     0x000006a1       0x4e MCAL/SPI/spi.o
- .debug_loc     0x000006ef      0x292 MCAL/TIMER0/timer0.o
+ .debug_loc     0x000006ef      0x27d MCAL/TIMER0/timer0.o
 
 .debug_macinfo
  *(.debug_macinfo)

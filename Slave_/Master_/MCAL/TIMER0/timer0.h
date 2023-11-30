@@ -26,7 +26,7 @@
 #define External_Falling	5
 #define External_Raising	6
 
-#define  CPU_Frequency pow(10,6)
+#define  CPU_Frequency 1000000.0
 
 #ifndef TIMER0_H_
 #define TIMER0_H_

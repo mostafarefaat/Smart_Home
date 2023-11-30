@@ -131,15 +131,5 @@ void LCD_4_bit_sendString(uint8_t *str)
 	}
 	
 }
-void LCD_4_bit_sendString_reverse(uint8_t *str)
-{
-	uint8_t i;
-	
-	for(i=3; *(str + i) != 0; i--)	//send each character until str is null
-	{
-		
-		LCD_4_bit_sendChar(*(str + i)); // call the LCD_sendChar function each time
-	}
-	
-}
+
 
